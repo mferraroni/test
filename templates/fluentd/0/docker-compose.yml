@@ -1,0 +1,35 @@
+data:
+  tty: true
+  command:
+   - cat
+  image: ubuntu:14.04
+  volumes:
+   - /log
+  stdin_open: true
+
+log:
+  image: mferraroni/logserver
+  ports:
+   - "${LOGSERVER_PORT}:24224"
+  labels:
+    io.rancher.sidekicks: data, rtail
+  volumes_from:
+   - data
+
+rtail:
+  image: mferraroni/rtail
+  ports: 
+   - "${NGINX_PORT}:${NGINX_PORT}"
+  volumes_from:
+   - data
+  environment:
+    DEBUG: ${DEBUG}  
+    NGINX_DNS: ${NGINX_DNS}  
+    NGINX_PORT: ${NGINX_PORT}
+    NGINX_PASSWD: ${NGINX_PASSWD}
+    LOGFILE1: ${LOGFILE1}
+    STREAM_ID1: ${STREAM_ID1}
+    LOGFILE2: ${LOGFILE2}
+    STREAM_ID2: ${STREAM_ID2}
+    LOGFILE3: ${LOGFILE3}
+    STREAM_ID3: ${STREAM_ID3}

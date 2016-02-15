@@ -1,0 +1,69 @@
+.catalog:
+  name: "fluentd"
+  version: "v1.0"
+  description: "Fluentd container"
+  minimum_rancher_version: v0.44.0
+  uuid: "cbe6f5ad-b4bf-4876-ae3c-a3a636fb5165"
+  questions:
+  - variable: "NGINX_DNS"
+    label: "DNS Name"
+    description: "Virtual DNS name"
+    default: "rtail"
+    required: false
+    type: "string"
+  - variable: "NGINX_PORT"
+    label: "NGINX Listening port"
+    description: "NGINX Listening port"
+    required: true
+    type: enum
+    options:
+      - "80"
+      - "8080"
+      - "8081"
+      - "8082"
+      - "8083"
+      - "8084"
+      - "8085"
+      - "8086"
+      - "8087"
+      - "8088"
+      - "8089"
+  - variable: "NGINX_PASSWD"
+    label: "Password for admin user in NGINX"
+    required: true
+    type: "password"
+  - variable: "LOGSERVER_PORT"
+    label: "LOGSERVER Listening port"
+    description: "LOGSERVER Listening port"
+    required: true
+    type: enum
+    options:
+      - "24221"
+      - "24222"
+      - "24223"
+      - "24224"
+      - "24225"
+      - "24226"
+      - "24227"
+      - "24228"
+      - "24229"
+  - variable: "LOGFILE1"
+    label: "Logfile 1"
+    description: "Logfile name to tail in the format: syslog-<tag>:.log"
+    type: "string"
+    required: true
+  - variable: "STREAM_ID1"
+    label: "Stream ID 1"
+    description: "Stream ID visible in the web application accociated to LOGFILE"
+    type: "string"
+    required: true
+  - variable: "LOGFILE2"
+    label: "Logfile 2"
+    description: "Logfile name to tail in the format: syslog-<tag>:.log"
+    type: "string"
+    required: false
+  - variable: "STREAM_ID2"
+    label: "Stream ID 2"
+    description: "Stream ID visible in the web application accociated to LOGFILE"
+    type: "string"
+    required: false
