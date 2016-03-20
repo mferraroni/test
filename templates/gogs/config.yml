@@ -1,4 +1,4 @@
-me: Gogs
+name: Gogs
 description: |
     A painless self-hosted Git service
 version: v0.8.43
