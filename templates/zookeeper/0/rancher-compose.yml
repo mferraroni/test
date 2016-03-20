@@ -6,21 +6,15 @@
   uuid: "094386fd-6d3f-4c4d-aabb-e3dffea5c2f2"
   questions:
   - variable: "HOSTNAME"
-    label: "Hostname"
-    description: "addressable hostname for this node (Exhibitor will forward users of the UI to this address) e.g. test"
+    label: "Node FQDN"
+    description: "addressable hostname for this node (Exhibitor will forward users of the UI to this address)"
     default: ""
-    required: true
-    type: "string"
-  - variable: "DOMAIN"
-    label: "domain"
-    description: "Domain part of the FQDN (e.g. digital-blue.biz)"
-    default: "digital-blue.biz"
     required: true
     type: "string"
   - variable: "S3_BUCKET"
     label: "S3 Bucket"
     description: "(optional) bucket and key used by Exhibitor for backups and coordination (e.g. test-bucket:key)" 
-    default: ""
+    default: "digital-blue-exhibitor-bucket:config"
     required: false
     type: "string"
   - variable: "S3_PREFIX"
@@ -32,13 +26,13 @@
   - variable: "AWS_ACCESS_KEY_ID"
     label: "AWS Access Key ID"
     description: "(optional) AWS access key ID with read/write permissions on S3_BUCKET"
-    default: ""
+    default: "AKIAI236B3CXDKVQ6QJA"
     required: false
     type: "string"
   - variable: "AWS_SECRET_ACCESS_KEY"
     label: "AWS_SECRET_ACCESS_KEY"
     description: "(optional) secret key for AWS_ACCESS_KEY_ID"
-    default: ""
+    default: "6m4++kivZ6eSrRZpgpI8CSS1M303jYUBntxvd+dG"
     required: false
     type: "string"
   - variable: "AWS_REGION"

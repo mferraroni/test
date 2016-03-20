@@ -6,10 +6,9 @@ zookeeper:
    - "2888:2888"
    - "3888:3888"
   labels:
-    io.rancher.container.create_agent: "true"
-    io.rancher.container.agent.role: "environment"
+    io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
   environment:
-    HOSTNAME: ${HOSTNAME}-${RANDOM}.${DOMAIN}
+    HOSTNAME: ${HOSTNAME}
     S3_BUCKET: ${S3_BUCKET}  
     S3_PREFIX: ${S3_PREFIX}  
     AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
