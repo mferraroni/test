@@ -1,0 +1,7 @@
+name: "Fluentd service"
+description: "This is a service to get the log from external docker containers"
+version: "1.0"
+category: "Infrastructure"
+maintainer: "matteo.ferraroni@clevertech.biz"
+license: "GPL"
+projectURL: "http://www.google.it"

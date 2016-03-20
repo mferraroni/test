@@ -1,0 +1,61 @@
+.catalog:
+  name: "fluentd"
+  version: "v1.0"
+  description: "Fluentd container"
+  minimum_rancher_version: v0.44.0
+  uuid: "cbe6f5ad-b4bf-4876-ae3c-a3a636fb5165"
+  questions:
+  - variable: "HOSTNAME"
+    label: "DNS Name"
+    description: "addressable hostname for this node (Exhibitor will forward users of the UI to this address)"
+    default: ""
+    required: true
+    type: "string"
+  - variable: "S3_BUCKET"
+    label: "S3 Bucket"
+    description: "(optional) bucket used by Exhibitor for backups and coordination"
+    default: ""
+    required: false
+    type: "string"
+  - variable: "S3_PREFIX"
+    label: "S3 Prefix"
+    description: "(optional) key prefix within S3_BUCKET to use for this cluster"
+    default: ""
+    required: false
+    type: "string"
+  - variable: "AWS_ACCESS_KEY_ID"
+    label: "AWS Access Key ID"
+    description: "(optional) AWS access key ID with read/write permissions on S3_BUCKET"
+    default: ""
+    required: false
+    type: "string"
+  - variable: "AWS_SECRET_ACCESS_KEY"
+    label: "AWS_SECRET_ACCESS_KEY"
+    description: "(optional) secret key for AWS_ACCESS_KEY_ID"
+    default: ""
+    required: false
+    type: "string"
+  - variable: "AWS_REGION"
+    label: "AWS Region"
+    description: "(optional) the AWS region of the S3 bucket"
+    default: "eu-central-1"
+    required: false
+    type: "string"
+  - variable: "ZK_PASSWORD"
+    label: "ZK Password"
+    description: "(optional) the HTTP Basic Auth password for the 'zk' user"
+    default: ""
+    required: false
+    type: "string"
+  - variable: "ZK_DATA_DIR"
+    label: "ZK Data dir"
+    description: "(optional) Zookeeper data directory"
+    default: ""
+    required: false
+    type: "string"
+  - variable: "ZK_LOG_DIR"
+    label: "ZK Log dir"
+    description: "(optional) Zookeeper log directory"
+    default: ""
+    required: false
+    type: "string"

@@ -1,0 +1,20 @@
+zookeeper:
+  image: mbabineau/zookeeper-exhibitor
+  ports:
+   - "8181:8181"
+   - "2181:2181"
+   - "2888:2888"
+   - "3888:3888"
+  labels:
+    io.rancher.container.create_agent: "true"
+    io.rancher.container.agent.role: "environment"
+  environment:
+    HOSTNAME: ${HOSTNAME}
+    S3_BUCKET: ${S3_BUCKET}  
+    S3_PREFIX: ${S3_PREFIX}  
+    AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+    AWS_REGION: ${AWS_REGION}
+    ZK_PASSWORD: ${ZK_PASSWORD}
+    ZK_DATA_DIR: ${ZK_DATA_DIR}
+    ZK_LOG_DIR: ${ZK_LOG_DIR}
