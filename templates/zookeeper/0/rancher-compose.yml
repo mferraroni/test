@@ -1,9 +1,9 @@
 .catalog:
-  name: "fluentd"
+  name: "zookeeper"
   version: "v1.0"
-  description: "Fluentd container"
+  description: "Zookeeper container"
   minimum_rancher_version: v0.44.0
-  uuid: "cbe6f5ad-b4bf-4876-ae3c-a3a636fb5165"
+  uuid: "094386fd-6d3f-4c4d-aabb-e3dffea5c2f2"
   questions:
   - variable: "HOSTNAME"
     label: "DNS Name"
