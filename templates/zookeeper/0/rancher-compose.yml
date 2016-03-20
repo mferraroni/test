@@ -13,7 +13,7 @@
     type: "string"
   - variable: "S3_BUCKET"
     label: "S3 Bucket"
-    description: "(optional) bucket used by Exhibitor for backups and coordination"
+    description: "(optional) bucket and key used by Exhibitor for backups and coordination (e.g. test-bucket:key)" 
     default: ""
     required: false
     type: "string"
