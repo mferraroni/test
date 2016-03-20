@@ -9,7 +9,7 @@ zookeeper:
     io.rancher.container.create_agent: "true"
     io.rancher.container.agent.role: "environment"
   environment:
-    HOSTNAME: ${HOSTNAME}-${RANDOM}
+    HOSTNAME: ${HOSTNAME}-${RANDOM}.${DOMAIN}
     S3_BUCKET: ${S3_BUCKET}  
     S3_PREFIX: ${S3_PREFIX}  
     AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}

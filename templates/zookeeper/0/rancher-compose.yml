@@ -6,9 +6,15 @@
   uuid: "094386fd-6d3f-4c4d-aabb-e3dffea5c2f2"
   questions:
   - variable: "HOSTNAME"
-    label: "DNS Name"
-    description: "addressable hostname for this node (Exhibitor will forward users of the UI to this address)"
+    label: "Hostname"
+    description: "addressable hostname for this node (Exhibitor will forward users of the UI to this address) e.g. test"
     default: ""
+    required: true
+    type: "string"
+  - variable: "DOMAIN"
+    label: "domain"
+    description: "Domain part of the FQDN (e.g. digital-blue.biz)"
+    default: "digital-blue.biz"
     required: true
     type: "string"
   - variable: "S3_BUCKET"
